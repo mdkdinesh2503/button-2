@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="btn">
+        <a href="#"><span>about me</span></a>
+    </div>
+</body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'poppin', sans-serif;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: black;
+    }
+
+    .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 25px;
+    }
+
+    .btn a {
+        position: relative;
+        display: inline-block;
+        padding: 20px 30px;
+        border: 5.5px solid #14d5dc;
+        margin: 40px;
+        text-transform: uppercase;
+        color: rgb(255, 230, 0);
+        text-decoration: none;
+        font-weight: 700;
+        letter-spacing: 2px;
+        -webkit-box-reflect: below 0px linear-gradient(transparent, #0002);
+        transition: 0.5s;
+        transition-delay: 0s;
+    }
+
+    .btn a:hover {
+        transition-delay: 1.5s;
+        color: #000;
+        box-shadow: 0 0 10px #14d5dc,
+            0 0 20px #14d5dc,
+            0 0 40px #14d5dc,
+            0 0 80px #14d5dc,
+            0 0 160px #14d5dc;
+    }
+
+    .btn a span {
+        position: relative;
+        z-index: 100;
+        font-family: monospace;
+    }
+
+    .btn a:nth-child(2) {
+        filter: hue-rotate(80deg);
+    }
+
+    .btn a::before {
+        content: '';
+        position: absolute;
+        left: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 2px;
+        background: #14d5dc;
+        box-shadow: 5px -8px 0 #14d5dc,
+            5px 8px 0 #14d5dc;
+        transition: width 0.5s, left 0.5s, height 0.5s;
+        box-shadow: 0.5s;
+        transition-delay: 1s, 0.5s, 0s, 0s;
+    }
+
+    .btn a:hover::before {
+        width: 60%;
+        height: 100%;
+        left: -2px;
+        box-shadow: 5px 0 0 #14d5dc,
+            5px 0 0 #14d5dc;
+        transition-delay: 0s, 0.5s, 1s, 1s;
+    }
+
+    .btn a::after {
+        content: '';
+        position: absolute;
+        right: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 2px;
+        background: #14d5dc;
+        box-shadow: -5px -8px 0 #14d5dc,
+            -5px 8px 0 #14d5dc;
+        transition: width 0.5s, left 0.5s, height 0.5s;
+        box-shadow: 0.5s;
+        transition-delay: 1s, 0.5s, 0s, 0s;
+    }
+
+    .btn a:hover::after {
+        width: 100%;
+        height: 100%;
+        right: -2px;
+        box-shadow: -5px 0 0 #14d5dc,
+            -5px 0 0 #14d5dc;
+        transition-delay: 0s, 0.5s, 1s, 1s;
+    }
+
+    @media (max-width: 900px) {
+        .btn a {
+            padding: 9px 20px;
+        }
+    }
+</style>
+
+</html>
